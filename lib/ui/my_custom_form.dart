@@ -14,16 +14,27 @@ class MyCustomFormState extends State<MyCustomForm> {
     return Form(
       key: _formkey,
       child: ListView(
-        children: <widget>[
+        children: <Widget>[
           TextFormField(
             validator: (value){
-              if (value.isEmpty) {
-                return "Please input value"
+              if (value.isEmpty){
+                return "please input your email";
               }
-            }
+            },
           )
-        ]
+        ],
       ),
+      // child: ListView(
+      //   children: <widget>[
+      //     TextFormField(
+      //       validator: (value){
+      //         if (value.isEmpty) {
+      //           return "Please input value"
+      //         }
+      //       }
+      //     )
+      //   ]
+      // ),
       );
   }
 }
