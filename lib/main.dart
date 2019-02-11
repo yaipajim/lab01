@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import './ui/first_Screen.dart';
+import './ui/second_Screen.dart';
+import './ui/detail_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -8,24 +11,16 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      // debugShowCheckedModeBanner: false,
+      // debugShowCheckedModeBanner: false, //show bar debug
       theme: ThemeData(
         primarySwatch: Colors.red,
       ),
-      home: MyHomePage(),
-    );
-  }
-}
-
-class MyHomePage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    // TODO: implement build
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("PACKINZG2"),
-      ),
-      body: Text('Hello WORLD'),
+      // home: MyHomePage(),
+      routes:{
+        "/" :(context) => FirstScreen(),
+        "/second":(context) => SecondScreen(),
+        "/detail":(context) => DetailScreen(),
+        },
     );
   }
 }
